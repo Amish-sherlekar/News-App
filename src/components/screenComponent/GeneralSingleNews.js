@@ -56,6 +56,8 @@ const GeneralSingleNews = ({ item, index, currentIndex }) => {
           borderRadius: 100,
           width: 170,
           textAlign: "center",
+          borderColor: "#f00",
+          borderWidth: 1,
         }}>Read News</Text>
       </TouchableOpacity>
       <Actionsheet isOpen={currentIndex || !index ? openActionSheet : false} onClose={onClose}>

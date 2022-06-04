@@ -42,7 +42,8 @@
     "react-native-web": "0.17.7",
     "react-navigation": "^4.2.0",
     "tslib": "^2.4.0",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "expo-updates": "~0.13.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
