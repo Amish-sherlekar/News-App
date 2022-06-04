@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import AppContainer from './src/components/screenComponent/AppContainer';
 import * as Font from "expo-font"

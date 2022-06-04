@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native'
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native'
 import { NativeBaseProvider } from 'native-base'
 import DrawerNavigation from '../../nav/Drawer/DrawerNavigation'
@@ -14,14 +14,14 @@ const AppContainer = () => {
             }
         );
         return () => {
-            true;
-        };
+            true
+        }
     }, []);
 
-    const [darkApp, setDarkApp] = useState(false);
+    const [darkApp, setDarkApp] = useState(true);
     const appTheme = darkApp ? DarkTheme : DefaultTheme;
     return (
-        <NavigationContainer theme={DefaultTheme}>
+        <NavigationContainer theme={appTheme}>
             <NativeBaseProvider>
                 <DrawerNavigation />
             </NativeBaseProvider>

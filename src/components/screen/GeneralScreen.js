@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text, TouchableOpacity, Modal, FlatList } from 'react-native'
+import { View, Text, TouchableOpacity, Modal, FlatList, Dimensions } from 'react-native'
 import { Actionsheet, Box, Button, useDisclose } from "native-base"
 import { auth, db } from '../../auth/config';
 import GeneralSingleNews from '../screenComponent/GeneralSingleNews';
 import { SwiperFlatList } from "react-native-swiper-flatlist"
+
+const windowHeight = Dimensions.get("window").height;
 
 const GeneralScreen = () => {
   const { isOpen, isClose, onOpen, onClose } = useDisclose();
@@ -56,7 +58,7 @@ const GeneralScreen = () => {
         keyExtractor={(item, index) => index}
         style={{
           width: "100%",
-          height: 400,
+          height: windowHeight,
         }}
       />
     )

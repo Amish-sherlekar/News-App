@@ -44,8 +44,6 @@ const NewsScreen = ({ route, navigation }) => {
     getNews()
   }, [article]);
 
-
-
   if (article.articles === "") {
     return (
       <View></View>

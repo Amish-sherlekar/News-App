@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import GeneralScreen from '../../components/screen/GeneralScreen'
 import ExploreScreen from '../../components/screen/ExploreScreen'
@@ -7,7 +7,7 @@ import CustomDrawer from './CustomDrawer'
 import NewsScreen from '../../components/screen/NewsScreen'
 import SavedScreen from "../../components/screen/SavedScreen"
 import StackNavigation from "../Stack/StackNavigation"
-import { Ionicons } from "@expo/vector-icons"
+import { Feather, Ionicons } from "@expo/vector-icons"
 
 const Drawer = createDrawerNavigator()
 
@@ -17,6 +17,9 @@ const DrawerNavigation = () => {
       useLegacyImplementation
       drawerContent={(props) => <CustomDrawer {...props} />}
       screenOptions={{
+        headerStyle:{
+          backgroundColor: '#909090',
+        },
         drawerStyle: {
           width: '90%',
         },
